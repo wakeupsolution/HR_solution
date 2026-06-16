@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,11 +13,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-2xl font-bold text-indigo-950 flex flex-col">
-              <span className="tracking-wider">REBIRTH</span>
-              <span className="text-xs text-cyan-700 font-medium uppercase tracking-widest">Enterprises</span>
-            </Link>
-          </div>
+  <Link href="/" className="flex items-center">
+    <Image
+      src="/rblogo.png"
+      alt="REBIRTH ENTERPRISES"
+      width={180}
+      height={80}
+      priority
+    />
+  </Link>
+</div>
           
           <div className="hidden md:flex space-x-8 items-center">
             <Link href="/" className="text-slate-700 hover:text-cyan-600 transition-colors">Home</Link>
