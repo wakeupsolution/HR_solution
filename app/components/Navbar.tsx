@@ -82,7 +82,7 @@ export default function Navbar() {
                       key={service.name}
                       href={service.href}
                       // This forces the dropdown to close by removing hover/focus state
-                      onClick={() => document.activeElement?.blur()} 
+                     onClick={() => (document.activeElement as HTMLElement)?.blur()}
                       className="block px-5 py-4 text-slate-700 hover:bg-cyan-50 hover:text-cyan-600 transition-colors border-b border-slate-100 last:border-0"
                     >
                       {service.name}
